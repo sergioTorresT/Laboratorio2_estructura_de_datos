@@ -57,3 +57,14 @@ Thu Mar 26 07:23:22 PM UTC 2026:
  1 file changed, 4 insertions(+), 4 deletions(-)
  tests:  0|0
 b35da42
+Thu Mar 26 07:41:32 PM UTC 2026: 
+ list.c | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:111:1: error: control reaches end of non-void function [-Werror=return-type]
+  111 | }
+      | ^
+cc1: all warnings being treated as errors
+258a8c3

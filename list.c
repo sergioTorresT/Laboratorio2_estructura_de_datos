@@ -110,7 +110,7 @@ void * popCurrent(List * list) {
             list -> tail -> next = NULL;
         }
         else{
-            list -> tail = NULL
+            list -> tail = NULL;
         }
         list -> current = list -> tail;
     }

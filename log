@@ -28,3 +28,16 @@ list.c:98:19: error: ‘der’ undeclared (first use in this function)
    98 |     izq -> next = der;
       |                   ^~~
 5dfa257
+Thu Mar 26 07:19:20 PM UTC 2026: 
+ list.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:93:33: error: ‘return’ with no value, in function returning non-void [-Wreturn-mismatch]
+   93 |     if(list -> current == NULL) return;
+      |                                 ^~~~~~
+list.c:92:8: note: declared here
+   92 | void * popCurrent(List * list) {
+      |        ^~~~~~~~~~
+d6ef5e6

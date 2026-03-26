@@ -100,6 +100,7 @@ void * popCurrent(List * list) {
         else{
             list -> tail = NULL;
         }
+        list -> current = list -> head;
     }
     
     

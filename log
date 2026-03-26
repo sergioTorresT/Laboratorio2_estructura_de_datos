@@ -96,3 +96,14 @@ list.c:119:6: error: ‘cleanList’ defined but not used [-Werror=unused-functi
       |      ^~~~~~~~~
 cc1: all warnings being treated as errors
 8c0a7bd
+Thu Mar 26 07:54:57 PM UTC 2026: 
+ list.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:116:46: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+  116 |     void *dato = (void *) list -> current -> dato;
+      |                                              ^~~~
+      |                                              data
+f327e07

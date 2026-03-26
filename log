@@ -107,3 +107,26 @@ list.c:116:46: error: ‘Node’ has no member named ‘dato’; did you mean �
       |                                              ^~~~
       |                                              data
 f327e07
+Thu Mar 26 07:55:16 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘popCurrent’:
+list.c:116:46: error: ‘Node’ has no member named ‘dato’; did you mean ‘data’?
+  116 |     void *dato = (void *) list -> current -> dato;
+      |                                              ^~~~
+      |                                              data
+list.c:117:12: error: ‘data’ undeclared (first use in this function); did you mean ‘dato’?
+  117 |     return data;
+      |            ^~~~
+      |            dato
+list.c:117:12: note: each undeclared identifier is reported only once for each function it appears in
+list.c:116:11: error: unused variable ‘dato’ [-Werror=unused-variable]
+  116 |     void *dato = (void *) list -> current -> dato;
+      |           ^~~~
+list.c:118:1: error: control reaches end of non-void function [-Werror=return-type]
+  118 | }
+      | ^
+cc1: all warnings being treated as errors
+5be56a9

@@ -121,7 +121,7 @@ void * popCurrent(List * list)
     }
     free(list->current);
    
-    return ptrValor;
+    return Valor;
 }
 
 void cleanList(List * list) {

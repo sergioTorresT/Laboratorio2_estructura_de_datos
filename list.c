@@ -113,7 +113,7 @@ void * popCurrent(List * list) {
     
         return NULL;
     }
-    void *dato = (void *) list -> current -> dato;
+    void *dato = (void *) list -> current -> data;
     return dato;
 }
 

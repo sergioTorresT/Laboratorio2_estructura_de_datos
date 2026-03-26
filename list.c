@@ -114,7 +114,7 @@ void * popCurrent(List * list) {
         return NULL;
     }
     void *dato = (void *) list -> current -> dato;
-    return data;
+    return dato;
 }
 
 void cleanList(List * list) {

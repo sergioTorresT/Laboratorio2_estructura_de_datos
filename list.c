@@ -93,11 +93,16 @@ void * popCurrent(List * list) {
     
     if(list -> current == list -> head){
         list -> head = (list -> current) -> next;
+
+        if(list -> head != NULL){
+            list -> head -> prev = NULL;
+        }
+        else{
+            list -> tail = NULL;
+        }
     }
     
-    if(list -> current == list -> tail){
-        list -> tail = (list -> current) -> prev;
-    }
+    
     
     else{
         Node *nodoIzq = list -> current -> prev;
@@ -108,6 +113,7 @@ void * popCurrent(List * list) {
     
         return NULL;
     }
+    void *dato = (void *)
 }
 
 void cleanList(List * list) {

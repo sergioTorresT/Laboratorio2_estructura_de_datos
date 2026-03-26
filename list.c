@@ -88,46 +88,40 @@ void * popBack(List * list) {
 // 6. Programe la función void* popCurrent(List * list), la cual elimina el nodo que está en la posición del current de la lista enlazada, y además retorna el dato del nodo eliminado.
 // Nota: El current debe quedar apuntando al nodo siguiente del eliminado.
 
-void * popCurrent(List * list) {
-    if(list -> current == NULL) return NULL;
-    
-    if(list -> current == list -> head){
-        list -> head = (list -> current) -> next;
+void * popCurrent(List * list)
+{
+    if(list->head == NULL) return NULL;
+   
+    Node *Nododer = list->current->next;
+    Node *Nodoizq = list->current->prev;
+    void *Valor = (void*)list->current->data;
 
-        if(list -> head != NULL){
-            list -> head -> prev = NULL;
-        }
-        else{
-            list -> tail = NULL;
-        }
-        list -> current = list -> head;
+    if(Nodoizq == NULL)
+    {
+        list->current = NULL;
+        list->head = Nododer;
+        list->head->prev = NULL;
+        return Valor;
     }
+    if(Nododer == NULL)
+    {
+        list->current = NULL;
+        list->tail = Nodoizq;
+        list->tail->next = NULL;
 
-    if(list -> current == list -> tail){
-        list -> tail = (list -> current) -> prev;
-
-        if(list -> head != NULL){
-            list -> tail -> next = NULL;
-        }
-        else{
-            list -> tail = NULL;
-        }
-        list -> current = list -> tail;
+        return Valor;
     }
-    
-    
-    
-    else{
-        Node *nodoIzq = list -> current -> prev;
-        Node *nodoDer = list -> current -> next;
-    
-        nodoIzq -> next = nodoDer;
-        nodoDer -> prev = nodoIzq;
-    
-        return NULL;
+       
+    else
+    {
+        list->current = NULL;
+       
+        Nodoizq->next = Nododer;
+        Nododer->prev = Nodoizq;
     }
-    void *dato = (void *) list -> current -> data;
-    return dato;
+    free(list->current);
+   
+    return ptrValor;
 }
 
 void cleanList(List * list) {

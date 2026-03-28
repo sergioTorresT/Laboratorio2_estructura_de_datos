@@ -47,9 +47,7 @@ List * createList() {
 
 void * firstList(List * list) {
     if(list == NULL || list -> head == NULL) return NULL;
-    if(list -> current == list -> head) return list -> current -> data;
-    
-    return NULL;
+    return list -> current -> data;
 }
 
 void * nextList(List * list) {
@@ -67,15 +65,13 @@ void * nextList(List * list) {
 
 void * lastList(List * list) {
     if(list == NULL || list -> tail == NULL) return NULL;
-    if(list -> current == list -> tail) return list -> current -> data;
-    
-    return NULL;
+    return list -> current -> data;
 }
 
 void * prevList(List * list) {
     if(list == NULL || list -> current == NULL) return NULL;
     if(list -> current -> prev == NULL) return NULL;
-    list -> current = list -> current -> next;
+    list -> current = list -> current -> prev;
     return list -> current -> data;
 }
 

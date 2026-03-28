@@ -189,3 +189,31 @@ Thu Mar 26 08:03:43 PM UTC 2026:
  tests:  1|5
 total_score: 10/60
 86d15e5
+Sat Mar 28 05:30:35 PM UTC 2026: 
+ list.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘createList’:
+list.c:35:5: error: unknown type name ‘list’; did you mean ‘List’?
+   35 |     list * lista = (list *)malloc(sizeof(list));
+      |     ^~~~
+      |     List
+list.c:35:21: error: ‘list’ undeclared (first use in this function); did you mean ‘List’?
+   35 |     list * lista = (list *)malloc(sizeof(list));
+      |                     ^~~~
+      |                     List
+list.c:35:21: note: each undeclared identifier is reported only once for each function it appears in
+list.c:35:27: error: expected expression before ‘)’ token
+   35 |     list * lista = (list *)malloc(sizeof(list));
+      |                           ^
+list.c:38:11: error: request for member ‘head’ in something not a structure or union
+   38 |     lista -> head = NULL;
+      |           ^~
+list.c:39:11: error: request for member ‘current’ in something not a structure or union
+   39 |     lista -> current = NULL;
+      |           ^~
+list.c:40:11: error: request for member ‘tail’ in something not a structure or union
+   40 |     lista -> tail = NULL;
+      |           ^~
+50c4ce5

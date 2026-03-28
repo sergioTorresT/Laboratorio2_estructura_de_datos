@@ -344,3 +344,16 @@ list.c:116:38: error: expected ‘;’ before ‘}’ token
   117 | }
       | ~                                     
 52bff98
+Sat Mar 28 06:08:04 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘pushCurrent’:
+list.c:103:56: error: ‘return’ with a value, in function returning void [-Wreturn-mismatch]
+  103 |     if(list == NULL || list -> current == NULL) return NULL;
+      |                                                        ^~~~
+list.c:102:6: note: declared here
+  102 | void pushCurrent(List * list, void * data) {
+      |      ^~~~~~~~~~~
+114cfcc

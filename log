@@ -301,3 +301,9 @@ list.c:70:48: error: expected expression before ‘->’ token
    70 |     if(list -> current == list -> tail) return -> list -> current -> data;
       |                                                ^~
 88b8a16
+Sat Mar 28 05:50:12 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  6|3
+total_score: 30/60
+141a929

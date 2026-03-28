@@ -233,3 +233,22 @@ Sat Mar 28 05:37:54 PM UTC 2026:
  tests:  2|4
 total_score: 20/60
 7637e12
+Sat Mar 28 05:42:15 PM UTC 2026: 
+ list.c | 10 +++++++++-
+ 1 file changed, 9 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘nextList’:
+list.c:57:13: error: ‘List’ {aka ‘struct List’} has no member named ‘next’
+   57 |     if(list -> next == NULL) return NULL;
+      |             ^~
+list.c:59:5: error: ‘lista’ undeclared (first use in this function); did you mean ‘list’?
+   59 |     lista -> current = lista -> current -> next;
+      |     ^~~~~
+      |     list
+list.c:59:5: note: each undeclared identifier is reported only once for each function it appears in
+list.c:62:1: error: control reaches end of non-void function [-Werror=return-type]
+   62 | }
+      | ^
+cc1: all warnings being treated as errors
+12c4055

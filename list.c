@@ -66,11 +66,17 @@ void * nextList(List * list) {
 //   - La segunda función retorna el dato del nodo anterior a current y actualiza el current para que apunte a ese nodo.
 
 void * lastList(List * list) {
+    if(list == NULL || list -> tail == NULL) return NULL;
+    if(list -> current == list -> tail) return -> list -> current -> data;
+    
     return NULL;
 }
 
 void * prevList(List * list) {
-    return NULL;
+    if(list = NULL || list -> current == NULL) return NULL;
+    if(list -> current -> prev == NULL) return NULL;
+    list -> current = list -> current -> next;
+    return list -> current -> data;
 }
 
 // 4. Programe la función void pushFront(List * list, void * data), la cual agrega un dato al comienzo de la lista.

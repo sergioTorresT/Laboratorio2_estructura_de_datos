@@ -273,3 +273,21 @@ Sat Mar 28 05:44:54 PM UTC 2026:
  tests:  6|3
 total_score: 30/60
 868bb74
+Sat Mar 28 05:49:31 PM UTC 2026: 
+ list.c | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+Compilation failed
+In file included from test.c:5:
+list.c: In function ‘lastList’:
+list.c:70:48: error: expected expression before ‘->’ token
+   70 |     if(list -> current == list -> tail) return -> list -> current -> data;
+      |                                                ^~
+list.c: In function ‘prevList’:
+list.c:76:13: error: assignment to ‘List *’ {aka ‘struct List *’} from ‘int’ makes pointer from integer without a cast [-Wint-conversion]
+   76 |     if(list = NULL || list -> current == NULL) return NULL;
+      |             ^
+list.c:76:8: error: suggest parentheses around assignment used as truth value [-Werror=parentheses]
+   76 |     if(list = NULL || list -> current == NULL) return NULL;
+      |        ^~~~
+cc1: all warnings being treated as errors
+8f6f9b6

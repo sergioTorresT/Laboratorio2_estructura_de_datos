@@ -217,3 +217,9 @@ list.c:40:11: error: request for member ‘tail’ in something not a structure 
    40 |     lista -> tail = NULL;
       |           ^~
 50c4ce5
+Sat Mar 28 05:31:05 PM UTC 2026: 
+ list.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|5
+total_score: 10/60
+bccd641
